@@ -1,0 +1,272 @@
+
+/* 10 30 70 */
+:root{
+    /* DARKMODE FB */
+    --firstcolor:#18191A;
+    --secondcolor:#242526;
+    --menucolor:#0866FF;
+    --inputcolor:#3A3B3C;
+    --fontcolor:rgb(176, 179, 184);
+    --fontcolor1:rgb(228, 230, 235);
+    --menuhover:rgba(176, 179, 184, .2);
+}
+
+/* NAV MENU */
+header{
+    position: fixed;
+    width: 100%;
+    top: 1;
+    /* position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position:-ms-sticky;
+    position: -o-sticky; */
+   
+   
+}
+.flexbox-container{
+    display: flex;
+    height: 5.5rem;
+
+    background-color: var(--secondcolor);
+    border-bottom: 1px solid var(--inputcolor);
+    width: 100%;
+    
+}
+.flexbox-item{
+    flex: 1;
+}
+
+.flexbox-1{
+    display: flex;
+    padding: 0.5rem ;
+}
+ 
+
+.flexbox-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 3;
+     
+}
+
+.flexbox-3{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 1rem;
+}
+
+/* CUSTOM WEBKIT */
+.searchbar-facebook-text::-webkit-input-placeholder{
+     color: var(--fontcolor);
+}
+
+/* ELEMENTS */
+/* LOGO AND SEARCH */
+.circle-facebook{
+    /* background-color: white; */
+  
+    /* width: 3.3rem; */
+    margin: 0.2rem;
+    padding-left: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--menucolor);
+    font-size: 4rem;
+    font-weight: bold;
+    
+}
+.searchbar-facebook{
+    width: 24rem;
+    margin: 0.2rem 0.5rem ;
+    border-radius: 50px / 50px;
+    background-color: var(--inputcolor);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    
+}
+.searchbar-facebook-text{
+    font-size: 1.5em;
+    margin-left: 0.9rem;
+    background-color: var(--inputcolor);
+    font-weight: lighter;
+    width: 17rem;
+}
+.searchbar-facebook-icon{
+    color: var(--fontcolor);
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+ 
+
+/* MIDDLE */
+
+.menu-button{
+    color: var(--fontcolor);
+    width: 12.8rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 0.5rem;
+ 
+}
+.d-none{
+    display: none;
+}
+.menu-icon{
+    font-size: 2.2em;
+    
+}
+[selected=false].menu-button:hover{
+    background-color: var(--menuhover);
+    border-radius: .6rem;
+    height: 90%;
+}
+[selected=true]:hover {
+    border-radius: 0%;
+    background-color: rgba(0, 0, 0, 0);
+}
+[selected=true] {
+    color: var(--menucolor);  
+    background-color: none;
+    border-bottom:4px solid var(--menucolor);
+}
+
+/* PROFILE */
+.findfriends-button{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 11rem;
+    background-color: var(--inputcolor);
+    color: var(--fontcolor1);
+    border-radius: 50px / 50px;
+    margin: 0rem 0.5rem;
+     font-size: 1.4rem;
+     font-weight:bolder;
+}
+.profile-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.2rem;
+    width: 4.2rem;
+    background-color: var(--inputcolor);
+    color: var(--fontcolor1);
+    border-radius: 50%;
+    margin: 0rem 0.5rem;
+}
+.profile-icon{
+    font-size: 1.9em;
+    
+}
+.circle-shape{
+    border-radius: 50%;
+}
+.profile-picture{
+    height: 4.2rem;
+    width: 4.2rem;
+   
+}
+.profile-picture:hover{
+     opacity: 90%;
+    
+}
+.profile-hover:hover{
+    background-color: rgba(176, 179, 184, .3);
+}
+ 
+/* ---------------- BODY ---------------- */
+
+.container-md{
+    display: flex;
+    margin: auto;
+    max-width: 1960px;
+    
+}
+
+.flexbox-body-container{
+background-color: var(--firstcolor);
+  display: flex;
+     margin-top: 5.5em;
+    width: 100%;
+    height: 100%;
+}
+.flexbox-body-item{
+     
+       flex: 1;
+ 
+}
+.flexbox-body1{
+ 
+ 
+}
+.side-menu-body{
+    position:sticky;
+    top: 5.6em;
+    height: auto;
+}
+.menu-side-profile{
+     width: 1.2em;
+}
+.menu-side-icon{
+    color: var(--fontcolor1);
+    font-size: 3em;
+    margin: 5px 5px 5px 10px;
+}
+.menu-side-title{
+    color: var(--fontcolor1);
+    font-size:1.4em;
+    font-weight:bolder;
+    margin-left:0.6em;
+    cursor:pointer;
+     user-select: none;
+}
+.menu-list-body{
+   padding:  1.5em 0.7em;
+    
+}
+.menu-item{
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 0.2em;
+}
+.menu-item:hover{
+    background-color: var(--menuhover);
+    border-radius: 0.7em 0.7em;
+}
+
+.side-footer{
+    background-color: aliceblue;
+    color: wheat;
+    position: fixed;
+    bottom: 0;
+    width: auto;
+}
+ 
+
+.flexbox-body2{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex:3;
+    height: 100%;
+    
+}
+.content{
+     margin-top: 2rem;
+     background-color: var(--secondcolor);
+      width: 68em;
+      
+}
+.flexbox-body3{
+ 
+}
