@@ -9,9 +9,11 @@
 
 
     <!-- custom css -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style1.css">
-    <!-- <link rel="stylesheet" href="guidelines.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <!-- <link rel="stylesheet" href="css/guidelines.css"> -->
+    <link rel="stylesheet" href="css/pseudoelements.css">
+
     <!-- custom css -->
     <!-- bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -44,12 +46,13 @@
 
             </div>
             <div class="flexbox-3 flexbox-item">
-                <a href="#" class="findfriends-button profile-hover d-none"> Find friends </a>
+                <a href="#" class="findfriends-button profile-hover  "> Find friends </a>
                 <a href="#" class="profile-button profile-hover"> <i
                         class="bi bi-grid-1x2-fill profile-icon"></i></a>
                 <a href="#" class="profile-button profile-hover"> <i class="bi bi-messenger profile-icon"></i></a>
                 <a href="#" class="profile-button profile-hover"> <i class="bi bi-bell-fill profile-icon"></i></a>
-                <a href="#"> <img src="image/jason.jpg" alt="jason" class="profile-picture circle-shape"></a>
+                <a href="#" class=" profile-picture"> <img src="image/jason.jpg" alt="jason" class="profile-picture circle-shape">
+                    <span><i class="bi bi-chevron-down profile-span"></i></span></a>
             </div>
         </nav>
     </header>
@@ -62,13 +65,12 @@
             <div class="flexbox-body1 flexbox-body-item" id="flexbox-body1">
 
                 <div class="side-menu-body">
-                    <div class="menu-list-body">
-
+                    <div class="menu-list-body"  >
+                        
                         <!-- PROFILE -->
                         <a href="#">
                             <div class="menu-item">
-                                <img src="image/jason.jpg" alt="jason"
-                                    class="menu-side-icon circle-shape menu-side-profile">
+                                <img src="image/jason.jpg" alt="jason" class=" circle-shape menu-side-profile">
                                 <div class="menu-side-title">Robles Danilo</div>
                             </div>
                         </a>
@@ -79,13 +81,7 @@
                                 <div class="menu-side-title">Friends</div>
                             </div>
                         </a>
-                        <!-- GROUP -->
-                        <a href="#">
-                            <div class="menu-item"> <i class="bi bi-person-circle menu-side-icon"></i>
-
-                                <div class="menu-side-title">Groups</div>
-                            </div>
-                        </a>
+                       
                         <!-- MEMORIES -->
                         <a href="#">
                             <div class="menu-item"> <i class="bi bi-clock-history menu-side-icon"></i>
@@ -98,6 +94,13 @@
                             <div class="menu-item"> <i class="bi bi-bookmark-fill menu-side-icon"></i>
 
                                 <div class="menu-side-title">Saved</div>
+                            </div>
+                        </a>
+                          <!-- GROUP -->
+                        <a href="#">
+                            <div class="menu-item"> <i class="bi bi-person-circle menu-side-icon"></i>
+
+                                <div class="menu-side-title">Groups</div>
                             </div>
                         </a>
                         <!-- VIDEO -->
@@ -150,15 +153,20 @@
                             </div>
                         </a>
                         <!--  -->
+                        
+                        <div class="side-footer"><a href="#" class="credits-footer" >Facebook Pure Cascading Style Sheets</a><p>Made by Robles Danilo</p> </div>
+                       
+                        
                     </div>
-                    <span class="side-footer">SDAd</span>
+                  
                 </div>
             </div>
 
 
             <section class="flexbox-body2 flexbox-body-item">
                 <div class="content" style="height: 400vh;  ">
-
+                  
+                     
 
                 </div>
 
@@ -166,7 +174,34 @@
 
             </section>
             <aside class="flexbox-body3 flexbox-body-item">
+    <div class="side-menu-body">
+                    <div class="menu-list-body"  >
+                        <div class="contact-title">
+                            <div class="contact-text"> 
+                            <h5  >Contacts </h5>
+                            </div>
+                            <div class="contact-list">
+                            <a href="#" class="contact-menu"> <i class="bi bi-search"></i></a>
+                            <a href="#" class="contact-menu"> <i class="bi bi-three-dots"></i></a>
+                        </div>
+                        </div>
+                         <a href="#">
+                            <div class="menu-item"> 
+                                         <img src="image/jason.jpg" alt="jason" class=" circle-shape menu-side-profile">
 
+                                <div class="menu-side-title">Name Here</div>
+                            </div>
+                        </a>
+                         <a href="#" class="opacity-50">
+                            <div class="menu-item"> 
+                                         <img src="image/jason.jpg" alt="jason" class="  circle-shape menu-side-profile">
+
+                                <div class="menu-side-title">Video</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                     </div>
             </aside>
         </div>
 

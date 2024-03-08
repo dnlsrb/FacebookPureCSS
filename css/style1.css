@@ -2,13 +2,13 @@
 /* 10 30 70 */
 :root{
     /* DARKMODE FB */
-    --firstcolor:#18191A;
-    --secondcolor:#242526;
-    --menucolor:#0866FF;
-    --inputcolor:#3A3B3C;
-    --fontcolor:rgb(176, 179, 184);
-    --fontcolor1:rgb(228, 230, 235);
-    --menuhover:rgba(176, 179, 184, .2);
+    --firstcolor:hsl(210, 4%, 10%);
+    --secondcolor:hsl(210, 3%, 15%);
+    --menucolor:hsl(217, 100%, 52%);
+    --inputcolor:hsl(210, 2%, 23%);
+    --fontcolor:hsl(218, 5%, 71%);
+    --fontcolor1:hsl(223, 15%, 91%);
+    --menuhover:hsla(218, 5%, 71%, 0.2);
 }
 
 /* NAV MENU */
@@ -47,7 +47,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 3;
+    flex:3.3;
      
 }
 
@@ -63,7 +63,26 @@ header{
      color: var(--fontcolor);
 }
 
+
+
 /* ELEMENTS */
+
+/* MAIN SCROLL */
+ 
+/* ::-webkit-scrollbar {
+ 
+    background: var(--menuhover); 
+} */
+/* Track */
+/* ::-webkit-scrollbar-track {
+  background: var(--menuhover); 
+ 
+} */
+/* Track */
+/* ::-webkit-scrollbar-thumb {
+background-color: var(--fontcolor);
+} */
+
 /* LOGO AND SEARCH */
 .circle-facebook{
     /* background-color: white; */
@@ -129,17 +148,18 @@ header{
 }
 [selected=true]:hover {
     border-radius: 0%;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: hsla(0, 0%, 0%, 0);
 }
 [selected=true] {
     color: var(--menucolor);  
     background-color: none;
-    border-bottom:4px solid var(--menucolor);
+ 
+    border-bottom:2px solid var(--menucolor);
 }
 
 /* PROFILE */
 .findfriends-button{
-    /* display: flex; */
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 3.5rem;
@@ -148,19 +168,19 @@ header{
     color: var(--fontcolor1);
     border-radius: 50px / 50px;
     margin: 0rem 0.5rem;
-     font-size: 1.4rem;
-     font-weight:bolder;
+    font-size: 1.4rem;
+    font-weight:bolder;
 }
 .profile-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 4.2rem;
-    width: 4.2rem;
+    height: 4rem;
+    width: 4rem;
     background-color: var(--inputcolor);
     color: var(--fontcolor1);
     border-radius: 50%;
-    margin: 0rem 0.5rem;
+    margin: 0rem 0.45rem;
 }
 .profile-icon{
     font-size: 1.9em;
@@ -169,10 +189,22 @@ header{
 .circle-shape{
     border-radius: 50%;
 }
-.profile-picture{
+.profile-picture{ 
+    position:relative;
     height: 4.2rem;
     width: 4.2rem;
-   
+    margin-right: .5rem;
+}
+.profile-span{
+    position: absolute;
+    bottom: -10%;
+    right: -2%;
+    color: var(--fontcolor);
+    background-color: var(--inputcolor);
+    border: 2px solid var(--firstcolor);
+    border-radius: 50%;
+     
+    
 }
 .profile-picture:hover{
      opacity: 90%;
@@ -192,9 +224,9 @@ header{
 }
 
 .flexbox-body-container{
-background-color: var(--firstcolor);
-  display: flex;
-     margin-top: 5.5em;
+    background-color: var(--firstcolor);
+    display: flex;
+    margin-top: 5.5em;
     width: 100%;
     height: 100%;
 }
@@ -209,16 +241,20 @@ background-color: var(--firstcolor);
 }
 .side-menu-body{
     position:sticky;
-    top: 5.6em;
-    height: auto;
+    top: 5.6em; 
+ 
+   
 }
 .menu-side-profile{
      width: 1.2em;
+       color: var(--fontcolor1);
+    font-size: 3em;
+    margin: 5px 5px 5px 7px;
 }
 .menu-side-icon{
     color: var(--fontcolor1);
     font-size: 3em;
-    margin: 5px 5px 5px 10px;
+    margin: 5px 5px 5px 15px;
 }
 .menu-side-title{
     color: var(--fontcolor1);
@@ -230,7 +266,8 @@ background-color: var(--firstcolor);
 }
 .menu-list-body{
    padding:  1.5em 0.7em;
-    
+    overflow-y: auto;
+  overflow-x: hidden;
 }
 .menu-item{
     height: 50px;
@@ -245,19 +282,24 @@ background-color: var(--firstcolor);
 }
 
 .side-footer{
-    background-color: aliceblue;
-    color: wheat;
+    margin: 1em .8em ;
+    font-size: 1.27em;
+    color: var(--fontcolor);
+    width: auto;
     position: fixed;
     bottom: 0;
-    width: auto;
+}
+.side-footer > a{
+    color: var(--fontcolor);
 }
  
 
+/* MIDDLE CONTENT */
 .flexbox-body2{
     display: flex;
     justify-content: center;
     align-items: start;
-    flex:3;
+    flex:3.3;
     height: 100%;
     
 }
@@ -270,3 +312,42 @@ background-color: var(--firstcolor);
 .flexbox-body3{
  
 }
+.opacity-50{
+    opacity:50%;
+}
+.contact-title{
+    color:var(--fontcolor);
+    font-size: 1.9rem;
+     display: flex;
+     width: 100%;
+     margin: 0.45em;
+     margin-bottom: 0;
+     
+}
+.contact-text{
+    flex: 1;
+}
+.contact-list{
+  flex: 1;
+  display:flex;
+  justify-content:end;
+}
+.contact-menu{
+     
+    margin-right: 0.6em;
+    font-size: 0.8em;
+    color: var(--fontcolor);
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+.contact-menu:hover{
+    border-radius: 50%;
+    background-color: var(--menuhover);
+}
+  
+
+/* SCROLL */

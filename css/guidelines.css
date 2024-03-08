@@ -1,0 +1,25 @@
+ 
+.flexbox-body-item {
+     
+ 
+    border:1px solid aquamarine;
+}
+.flexbox-body1 .menu-item, .menu-button, .profile-button, .findfriends-button, .profile-picture, .menu-item{
+ 
+ border:1px solid red;
+ 
+}
+ 
+
+::-webkit-scrollbar {
+ 
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(20, 36, 59); 
+ 
+}
+/* Track */
+::-webkit-scrollbar-thumb {
+background-color: rgb(60, 29, 68);
+}
