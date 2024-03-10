@@ -4,13 +4,15 @@
  
     border:1px solid aquamarine;
 }
-.flexbox-body1 .menu-item, .menu-button, .profile-button, .findfriends-button, .profile-picture, .menu-item{
+.flexbox-body1 .menu-item, .card-element, .menu-button, .profile-button, .findfriends-button, .profile-picture, .menu-item{
  
  border:1px solid red;
  
 }
  
-
+.flexbox-body2{
+  background-color: aliceblue;
+}
 ::-webkit-scrollbar {
  
 }

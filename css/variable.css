@@ -1,0 +1,29 @@
+[selected=false].menu-button:hover{
+    background-color: var(--menuhover);
+    border-radius: .6rem;
+    height: 90%;
+}
+[selected=true]:hover {
+    border-radius: 0%;
+    background-color: hsla(0, 0%, 0%, 0);
+}
+[selected=true] {
+    color: var(--menucolor);  
+    background-color: none;
+ 
+    border-bottom:2px solid var(--menucolor);
+}
+[new-story = true]{
+    border: 4px solid var(--menucolor);
+}
+[new-story = false]{
+    border: 4px solid var(--inputcolor);
+}
+[seen-story = true]{
+    border: 3px solid var(--menucolor);
+    padding: 1px;
+}
+[seen-story = false]{
+   border: 3px solid var(--inputcolor);
+   padding: 1px;
+}

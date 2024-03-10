@@ -2,20 +2,33 @@
 /* 10 30 70 */
 :root{
     /* DARKMODE FB */
-    --firstcolor:hsl(210, 4%, 10%);
+    --firstcolor:#18191a;
     --secondcolor:hsl(210, 3%, 15%);
     --menucolor:hsl(217, 100%, 52%);
     --inputcolor:hsl(210, 2%, 23%);
     --fontcolor:hsl(218, 5%, 71%);
     --fontcolor1:hsl(223, 15%, 91%);
     --menuhover:hsla(218, 5%, 71%, 0.2);
-}
 
+
+
+    /* LIGHT MODE FB */
+    /* --firstcolor:rgba(240,242,245,255);
+    --secondcolor:rgba(255,255,255,255);
+    --menucolor:hsl(217, 100%, 52%);
+    --inputcolor:rgba(240,242,245,255);
+    --fontcolor:rgba(119,121,125,255);
+    --fontcolor1:rgba(19,19,20,255);
+    --menuhover:hsla(218, 5%, 71%, 0.2); */
+}
+.object-contain{
+    object-fit: contain;
+}
 /* NAV MENU */
 header{
     position: fixed;
     width: 100%;
-    top: 1;
+    z-index: 1
     /* position: sticky;
     position: -webkit-sticky;
     position: -moz-sticky;
@@ -141,25 +154,11 @@ background-color: var(--fontcolor);
     font-size: 2.2em;
     
 }
-[selected=false].menu-button:hover{
-    background-color: var(--menuhover);
-    border-radius: .6rem;
-    height: 90%;
-}
-[selected=true]:hover {
-    border-radius: 0%;
-    background-color: hsla(0, 0%, 0%, 0);
-}
-[selected=true] {
-    color: var(--menucolor);  
-    background-color: none;
  
-    border-bottom:2px solid var(--menucolor);
-}
-
 /* PROFILE */
 .findfriends-button{
-    display: flex;
+    display: none;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     height: 3.5rem;
@@ -181,6 +180,7 @@ background-color: var(--fontcolor);
     color: var(--fontcolor1);
     border-radius: 50%;
     margin: 0rem 0.45rem;
+     
 }
 .profile-icon{
     font-size: 1.9em;
@@ -188,21 +188,25 @@ background-color: var(--fontcolor);
 }
 .circle-shape{
     border-radius: 50%;
+    font-size: 3em;
 }
 .profile-picture{ 
     position:relative;
     height: 4.2rem;
     width: 4.2rem;
     margin-right: .5rem;
+    margin-left:.10em ;
 }
 .profile-span{
     position: absolute;
     bottom: -10%;
-    right: -2%;
+    right: -10%;
     color: var(--fontcolor);
-    background-color: var(--inputcolor);
-    border: 2px solid var(--firstcolor);
+    color: var(--inputcolor);
+    background-color: var(--fontcolor);
+    border: 3px solid var(--secondcolor);
     border-radius: 50%;
+    font-size: 1.3em;
      
     
 }
@@ -246,9 +250,10 @@ background-color: var(--fontcolor);
    
 }
 .menu-side-profile{
-     width: 1.2em;
-       color: var(--fontcolor1);
-    font-size: 3em;
+    width: 1.2em;
+    height: 1.2em;
+    color: var(--fontcolor1);
+   
     margin: 5px 5px 5px 7px;
 }
 .menu-side-icon{
@@ -266,7 +271,9 @@ background-color: var(--fontcolor);
 }
 .menu-list-body{
    padding:  1.5em 0.7em;
-    overflow-y: auto;
+   padding-bottom: 0;
+ 
+    overflow-y: auto; 
   overflow-x: hidden;
 }
 .menu-item{
@@ -300,32 +307,93 @@ background-color: var(--fontcolor);
     justify-content: center;
     align-items: start;
     flex:3.3;
-    height: 100%;
-    
+    padding: 0 32px;
+    z-index: 0;
 }
-.content{
-     margin-top: 2rem;
-     background-color: var(--secondcolor);
-      width: 68em;
+
+.content-story{
+    margin-top: 2rem;
+    width: 68em;
       
 }
+.card-story{
+    width: 68em;
+    overflow-x: hidden;
+  display: flex;
+ 
+  padding: 5px 0px;
+}
+.d-flex{
+    display: flex;  justify-content: center;
+    align-items: start;
+}
+.card-element{
+    cursor: pointer  ;
+    margin-right: .5em;
+    display: flex;
+    border-radius: 10px; width: 140px;
+    height: 25em; 
+    overflow:hidden;
+    background-color: black;
+    overscroll-behavior-x:contain ;
+    box-shadow: 1px 1px 1px  var(--firstcolor);
+    position: relative;
+}
+.card-image{
+     
+    width: 140px;
+    object-fit:cover;
+    background-color: black;
+    
+}
+.card-image:hover{
+     transform: scale(1.02); 
+     transition: .2s linear; 
+     opacity: 90%;
+ 
+}
+.card-profile-story{
+    position: absolute;
+    width: 1.4em;
+    top: 4%;
+    left: 9%;
+  
+}
+
+.card-name-story{
+    position: absolute;
+    bottom: 1%;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 5px;
+    color: var(--fontcolor1);
+}
+ 
 .flexbox-body3{
  
 }
 .opacity-50{
     opacity:50%;
 }
-.contact-title{
+.side-title{
     color:var(--fontcolor);
     font-size: 1.9rem;
      display: flex;
      width: 100%;
-     margin: 0.45em;
-     margin-bottom: 0;
-     
+     padding: 8px;
+   
 }
+hr{
+    border-top: 1px solid var(--menuhover);
+    margin: 8px;
+}
+ 
 .contact-text{
     flex: 1;
+    font-weight: 100;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 .contact-list{
   flex: 1;
@@ -333,9 +401,7 @@ background-color: var(--fontcolor);
   justify-content:end;
 }
 .contact-menu{
-     
-    margin-right: 0.6em;
-    font-size: 0.8em;
+    font-size: .8em;
     color: var(--fontcolor);
     width: 2em;
     height: 2em;
@@ -348,6 +414,19 @@ background-color: var(--fontcolor);
     border-radius: 50%;
     background-color: var(--menuhover);
 }
+.create-new-group{
+    font-size:1.5rem ;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    width: 2.5em;
+    background-color: var(--menuhover);
+    color: var(--fontcolor1);
+    border-radius: 50%;
+    margin: 0rem 0.45rem;
   
+}
+ 
 
 /* SCROLL */

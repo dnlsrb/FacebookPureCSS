@@ -152,19 +152,51 @@ section{
 
 
 /* media queries */
-@media (max-width:991px) {
-    html{
-        font-size: 40%;
-    }
+
+/* TABLET */
  
-    .home {
-        min-height: 70vh;
+/* Laptop */
+ 
+@media (min-width:1921px){
+     .flexbox-body2{
+   
+        flex:1 !important;
     }
-    /* .header{
-        padding:1.5rem 2rem;
-    } */
-    section{
-        padding:2rem;
+    .container-md{
+        max-width: 1466px !important;
     }
+}
+
+ 
+
+@media   (max-width:1266px)  {
+  .flexbox-body1{
+    display: none;
+  }
+    .menu-button{
+    width: 10.6rem !important;
+  }
+  .searchbar-facebook-text{
+    display: none;
+  }
+  .searchbar-facebook{
+    width: 4rem !important;
+  }
+  .searchbar-facebook-icon{
+    margin: 1.1rem !important;
+ 
+  }    .card-story{
+    width: 58em !important;
+   
+}
+}
+@media  (max-width:968px)   {
+  .flexbox-body3{
+    display: none;
+  
+  }
+    .menu-button{
+    width: 5.6rem !important;
+  }
     
 }
