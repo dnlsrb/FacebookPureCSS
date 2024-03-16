@@ -13,9 +13,7 @@
 .flexbox-body2{
   background-color: aliceblue;
 }
-::-webkit-scrollbar {
  
-}
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgb(20, 36, 59); 

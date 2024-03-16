@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Rock+3D&display=swap');
 
 
-:root{
-    /* --main-color:#d3ad7f;
-    --black:#13131a;
-    --bg:#ececec;
-    --red:#ee0000;
-    --border:.1rem solid rgba(255,255,255,.03); */
-}
+ 
 *{
     font-family: 'Inter', sans-serif;
     /* font-family: 'Rock 3D', system-ui; */
@@ -159,12 +153,11 @@ section{
  
 @media (min-width:1921px){
      .flexbox-body2{
-   
-        flex:1 !important;
+     flex:1 !important;
     }
     .container-md{
         max-width: 1466px !important;
-    }
+    }  
 }
 
  
@@ -198,5 +191,13 @@ section{
     .menu-button{
     width: 5.6rem !important;
   }
-    
+ 
+}
+@media (max-width:1600px){
+        .side-footer{
+        bottom:0;
+    top:auto;
+    color:red !important;
+    position: static !important;
+  }
 }
