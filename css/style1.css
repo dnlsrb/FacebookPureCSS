@@ -14,6 +14,15 @@
     --fontcolor1:hsl(223, 15%, 91%);
     --menuhover:hsla(218, 5%, 71%, 0.2);
 
+    /* PINKMODE  */
+    /* --firstcolor:#F5D2E6 ; 
+    --secondcolor:  #FE5D9F;
+    --menucolor:#F5D2E6;
+    --inputcolor:  #F4BBD3;
+    --fontcolor:#be004f;
+    --fontcolor1:#750031;
+    --menuhover:hsla(217, 5%, 71%, 0.5) */
+
 
 
     /* LIGHT MODE FB */
@@ -26,7 +35,7 @@
     --menuhover:hsla(218, 5%, 71%, 0.2); */
 }
 .object-contain{
-    object-fit: contain;
+    object-fit: contain ;
 }
 /* NAV MENU */
 header{
@@ -438,10 +447,10 @@ hr{
     margin-top:2em ;
     border-radius: 10px; 
     text-align: center;
-    width: 100%;
     background-color: var(--secondcolor);
     margin-left: auto;
      margin-right: auto;
+     padding: 1em;
 }
 /*
 flex-post
@@ -454,11 +463,9 @@ Photo/Video-button
 Feeling/Activity-button
 */
  
-.post-something{
-padding: 1em;
-}
 .flex-post{
     display: flex;
+     width: auto;
     padding: .5em;
     padding-top: 0;
     padding-bottom: .3em;
@@ -469,12 +476,9 @@ padding: 1em;
 }
 .post-something-picture:hover{
    filter: brightness(120%)  ;
-   
-  
 }
  
 .post-something-button{
- 
     padding-left: .7em;
     margin-left: .6em;
     font-size: 1.6em;
@@ -491,13 +495,13 @@ padding: 1em;
 }
 .post-button{
    color: var(--fontcolor);
-    flex: 1;
     font-size: 1.5em;
-    display: flex;
+    display:  flex;    
     justify-content: center;
     align-items: center;
     padding: .5em 2em;
-    border-radius: 8spx;
+    border-radius: 8px;
+    width: 100%;
 }
 .post-button:hover{
     background-color: var(--menuhover);
@@ -509,6 +513,99 @@ padding: 1em;
      
  
 }
+.content-post{
+    height: auto;
+    width: 100%;
+    margin-top: 2em;
+    border-radius: 8px;
+    background-color: var(--secondcolor);
+     
+}
+.content-flex{
+    display: flex;
+         
+}
+.content-padding-post{
+    padding: 1.5em;
+        padding-top: .9em;
+        padding-bottom: .9em;
+}
+.content-name{
+    flex: 2;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+     margin-left:1em; 
+}
+.content-name-text{
+  
+    color: var(--fontcolor1);
+    font-size:1.4em;
+    font-weight:bolder;
+    cursor:pointer;
+    user-select: none;
+  
+}
+.content-name-text:hover{
+    text-decoration: underline;
+}
+.post-name-flex{
+    display: flex;
+    flex-direction: column;
+}
+.content-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-padding{
+    padding:.1em;
+}
+.content-name-text{
+font-size: 1.5em;
+}
+.content-post-time{
+color: var(--fontcolor);
+font-size: 1.1em;
+}
+.content-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: var(--fontcolor);
+}
+.content-comment-text{
+    color: var(--fontcolor1);
+    font-size: 1.5em;
+    width: auto;
+    margin:.5em; 
+   
+}
+.content-icon{
+     padding-right: 1.2em;
+    font-size: 1.5em;
+}
+.content-post-image{
+    width: 100%;  
+    display: flex;
+    position:static;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.post-image{
+    object-fit:contain;
+    width: 90%;
+   
+}
+.post-time-link:hover{
+    text-decoration: underline;
+}
+/* JUST FOR TESTING */
+.content-story{
+    margin-bottom: 5em;
+}
 .fa-video{
 color: #f02849;
 }
@@ -518,13 +615,5 @@ color: #45bd62;
 .fa-face-laugh{
 color: #f7b928;
 }
-.save-icon2 {
-background-image:url('image/test-facebook-icon.png');
-background-position:0 -185px;
-background-size:auto;
-width:36px;
-height:36px;
-background-repeat:no-repeat;
-display:inline-block
-}
+ 
 /* SCROLL */
