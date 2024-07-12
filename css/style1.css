@@ -1,9 +1,73 @@
 
 /* 10 30 70 */
+ 
+.menu-switch{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    margin: 10px;
+ 
+    z-index: 5555;
+}
+.wrapper{
+    margin:20px;
+        display: flex;
+    justify-content: end;
+ 
+}
+.mode-button{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+ 
+    cursor: pointer;
+ 
+    height:3em;
+    margin-right:10px;
+    background-color: transparent;
+    color:  var(--fontcolor);
+ 
+}
+.switch-button:hover{
+    box-shadow: 0px 0px 10px var(--fontcolor);
+     transition: width 2s, height 4s;
+}
+.switch-button{
+     margin: 5px;
+     width: 25px;
+     height: 25px;
+     border-radius: 50%;
+}   
+.pink-mode{
+    background: rgb(117,0,49);
+    background: linear-gradient(90deg, rgba(117,0,49,1) 0%, rgba(254,93,159,1) 100%);
+}
+.dark-mode{
+    background: rgb(24,25,26);
+    background: linear-gradient(90deg, rgba(24,25,26,1) 0%, rgba(10,104,255,1) 100%);
+}
+.light-mode{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(10,104,255,1) 100%);
+}
+
 :root{
 
     /* GLOBAL COLOR */
     --storycolor:hsl(223, 15%, 91%);
+
+
+    
+    /* PINKMODE  */
+    /* --firstcolor:#F5D2E6 ; 
+    --secondcolor:  #FE5D9F;
+    --menucolor:#F5D2E6;
+    --inputcolor:  #F4BBD3;
+    --fontcolor:#be004f;
+    --fontcolor1:#750031;
+    --menuhover:hsla(217, 5%, 71%, 0.5) */
+
 
     /* DARKMODE FB */
     --firstcolor:#18191a;
@@ -13,15 +77,6 @@
     --fontcolor:hsl(218, 5%, 71%);
     --fontcolor1:hsl(223, 15%, 91%);
     --menuhover:hsla(218, 5%, 71%, 0.2);
-
-    /* PINKMODE  */
-    /* --firstcolor:#F5D2E6 ; 
-    --secondcolor:  #FE5D9F;
-    --menucolor:#F5D2E6;
-    --inputcolor:  #F4BBD3;
-    --fontcolor:#be004f;
-    --fontcolor1:#750031;
-    --menuhover:hsla(217, 5%, 71%, 0.5) */
 
 
 
@@ -361,6 +416,11 @@ background-color: var(--fontcolor);
     background-color: black;
     
 }
+ 
+
+.transition *{
+    transition: 0.3s linear;
+}
 .card-image:hover{
      transform: scale(1.02); 
      transition: .2s linear; 
@@ -580,6 +640,7 @@ font-size: 1.1em;
     font-size: 1.5em;
     width: auto;
     margin:.5em; 
+    margin-left: 0;
    
 }
 .content-icon{

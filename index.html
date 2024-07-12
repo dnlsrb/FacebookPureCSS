@@ -28,17 +28,64 @@
 
 </head>
 
-<body>
+<body class="body-main">
+    <div class="menu-switch  ">
+        <div class="wrapper">
+        
+                 <button type="button" class="mode-button" id="pink"><div class="switch-button pink-mode"></div> </button>
+                <button type="button" class="mode-button" id="dark"><div class="switch-button dark-mode"></div> </button>
+                    <button type="button" class="mode-button" id="light"><div class="switch-button light-mode"></div> </button>
+
+                    <script >
+                        function addTransition() {
+                            document.documentElement.classList.add('transition');
+                            setTimeout(function() {
+                                document.documentElement.classList.remove('transition');
+                            }, 500);
+                        }
+                        document.getElementById('pink').addEventListener('click', function() {
+                             addTransition();
+                            document.documentElement.style.setProperty('--firstcolor', '#F5D2E6');
+                            document.documentElement.style.setProperty('--secondcolor', '#FE5D9F');
+                            document.documentElement.style.setProperty('--menucolor', '#F5D2E6');
+                            document.documentElement.style.setProperty('--inputcolor', ' #F4BBD3');
+                            document.documentElement.style.setProperty('--fontcolor', '#be004f');
+                            document.documentElement.style.setProperty('--fontcolor1', '#750031');
+                            document.documentElement.style.setProperty('--menuhover', 'hsla(217, 5%, 71%, 0.5)');
+                        });  
+                          document.getElementById('dark').addEventListener('click', function() {
+                             addTransition();
+                            document.documentElement.style.setProperty('--firstcolor', '#18191a');
+                            document.documentElement.style.setProperty('--secondcolor', 'hsl(210, 3%, 15%)');
+                            document.documentElement.style.setProperty('--menucolor', 'hsl(217, 100%, 52%)');
+                            document.documentElement.style.setProperty('--inputcolor', 'hsl(210, 2%, 23%)');
+                            document.documentElement.style.setProperty('--fontcolor', 'hsl(218, 5%, 71%)');
+                            document.documentElement.style.setProperty('--fontcolor1', 'hsl(223, 15%, 91%)');
+                            document.documentElement.style.setProperty('--menuhover', 'hsla(218, 5%, 71%, 0.5)');
+                        });   
+                          document.getElementById('light').addEventListener('click', function() {
+                             addTransition();
+                             document.documentElement.style.setProperty('--firstcolor', 'rgba(240,242,245,255)');
+                            document.documentElement.style.setProperty('--secondcolor', 'rgba(255,255,255,255)');
+                            document.documentElement.style.setProperty('--menucolor', 'hsl(217, 100%, 52%)');
+                            document.documentElement.style.setProperty('--inputcolor', 'rgba(240,242,245,255)');
+                            document.documentElement.style.setProperty('--fontcolor', 'rgba(119,121,125,255)');
+                            document.documentElement.style.setProperty('--fontcolor1', 'rgba(19,19,20,255)');
+                            document.documentElement.style.setProperty('--menuhover', 'hsla(218, 5%, 71%, 0.2)');
+                        });
+                    </script>
+        </div>
+    </div>
     <!-- header section starts -->
     <header class="header"  >
         <nav class="flexbox-container">
             <div class="flexbox-1 flexbox-item">
 
-                <a class="fa-brands fa-facebook circle-facebook  " href="#"></a>
-
+                <a class="fa-solid fa-p circle-facebook  " href="#"></a>
+<!-- fa-brands fa-facebook -->
                 <span class="searchbar-facebook">
                     <a href="#"  > <i class="bi bi-search searchbar-facebook-icon"></i></a>
-                    <input type="search" class="searchbar-facebook-text" placeholder="Search Facebook">
+                    <input type="search" class="searchbar-facebook-text" placeholder="Search Pinkbook">
 
                 </span>
             </div>
@@ -85,8 +132,8 @@
                         <!-- FRIENDS -->
                         <a href="#">
                             <div class="menu-item"> 
-                                <!-- <i class="bi bi-people-fill menu-side-icon"></i> -->
-                                  <i class="menu-side-icon" style="
+                                <i class="bi bi-people-fill menu-side-icon"></i>
+                                  <!-- <i class="menu-side-icon" style="
                                 background-image:url('image/test-facebook-icon.png');
                                 background-position:0 -296px;
                                 background-size:auto;
@@ -94,7 +141,7 @@
                                 height:36px;
                                 background-repeat:no-repeat;
                                 display:inline-block"
-                                ></i>
+                                ></i> -->
                                 <div class="menu-side-title">Friends</div>
                             </div>
                         </a>
@@ -102,8 +149,8 @@
                         <!-- MEMORIES -->
                         <a href="#">
                             <div class="menu-item"> 
-                                <!-- <i class="bi bi-clock-history menu-side-icon"></i> -->
-                                <i class="menu-side-icon" style="
+                                <i class="bi bi-clock-history menu-side-icon"></i>
+                                <!-- <i class="menu-side-icon" style="
                                 background-image:url('image/test-facebook-icon.png');
                                 background-position:0 -444px;
                                 background-size:auto;
@@ -111,7 +158,7 @@
                                 height:36px;
                                 background-repeat:no-repeat;
                                 display:inline-block"
-                                ></i>
+                                ></i> -->
 
                                 <div class="menu-side-title">Memories</div>
                             </div>
@@ -119,8 +166,8 @@
                         <!-- SAVED -->
                         <a href="#">
                             <div class="menu-item"> 
-                                <!-- <i class="bi bi-bookmark-fill menu-side-icon save-icon2"></i> -->
-                                <i class="menu-side-icon" style="
+                                <i class="bi bi-bookmark-fill menu-side-icon save-icon2"></i>
+                                <!-- <i class="menu-side-icon" style="
                                 background-image:url('image/test-facebook-icon.png');
                                 background-position:0 -185px;
                                 background-size:auto;
@@ -128,7 +175,7 @@
                                 height:36px;
                                 background-repeat:no-repeat;
                                 display:inline-block"
-                                ></i>
+                                ></i> -->
 
                                 <div class="menu-side-title">Saved</div>
                             </div>
@@ -136,8 +183,8 @@
                         <!-- GROUP -->
                         <a href="#">
                             <div class="menu-item"> 
-                                <!-- <i class="bi bi-person-circle menu-side-icon"></i> -->
-                                <i class="menu-side-icon" style="
+                                <i class="bi bi-person-circle menu-side-icon"></i>
+                                <!-- <i class="menu-side-icon" style="
                                 background-image:url('image/test-facebook-icon.png');
                                 background-position:0 -37px;
                                 background-size:auto;
@@ -145,7 +192,7 @@
                                 height:36px;
                                 background-repeat:no-repeat;
                                 display:inline-block"
-                                ></i>
+                                ></i> -->
 
                                 <div class="menu-side-title">Groups</div>
                             </div>
@@ -153,8 +200,8 @@
                         <!-- VIDEO -->
                         <a href="#">
                             <div class="menu-item"> 
-                                <!-- <i class="bi bi-play-btn menu-side-icon"></i> -->
-                                <i class="menu-side-icon" style="
+                                <i class="bi bi-play-btn menu-side-icon"></i>
+                                <!-- <i class="menu-side-icon" style="
                                 background-image:url('image/test-facebook-icon.png');
                                 background-position:0 -518px;
                                 background-size:auto;
@@ -162,7 +209,7 @@
                                 height:36px;
                                 background-repeat:no-repeat;
                                 display:inline-block"
-                                ></i>
+                                ></i> -->
 
                                 <div class="menu-side-title">Video</div>
                             </div>
@@ -170,8 +217,8 @@
                         <!-- SHOP -->
                         <a href="#">
                             <div class="menu-item"> 
-                                <!-- <i class="bi bi-shop menu-side-icon"></i> -->
-                                 <i class="menu-side-icon" style="
+                                <i class="bi bi-shop menu-side-icon"></i>
+                                 <!-- <i class="menu-side-icon" style="
                                 background-image:url('image/test-facebook-icon.png');
                                 background-position:0 -407px;
                                 background-size:auto;
@@ -179,24 +226,24 @@
                                 height:36px;
                                 background-repeat:no-repeat;
                                 display:inline-block"
-                                ></i>
+                                ></i> -->
                                 <div class="menu-side-title">Marketplace</div>
                             </div>
                         </a>
                         <!-- FEEDS -->
                         <a href="#">
                             <div class="menu-item"> 
-                                <!-- <i class="bi bi-pip-fill menu-side-icon"></i> -->
-                                <img class="menu-side-icon" draggable="false" height="36" width="36" alt="" 
-                                src="image/feeds.png">
+                                <i class="bi bi-pip-fill menu-side-icon"></i>
+                                <!-- <img class="menu-side-icon" draggable="false" height="36" width="36" alt="" 
+                                src="image/feeds.png"> -->
                                 <div class="menu-side-title">Feeds</div>
                             </div>
                         </a>
                         <!-- EVENTS -->
                         <a href="#">
                             <div class="menu-item"> 
-                                <!-- <i class="bi bi-calendar-plus-fill menu-side-icon"></i> -->
-                                 <i class="menu-side-icon" style="
+                                <i class="bi bi-calendar-plus-fill menu-side-icon"></i>
+                                 <!-- <i class="menu-side-icon" style="
                                 background-image:url('image/events.png');
                                 background-position:0 -37px;
                                 background-size:auto;
@@ -204,16 +251,16 @@
                                 height:36px;
                                 background-repeat:no-repeat;
                                 display:inline-block"
-                                ></i>
+                                ></i> -->
                                 <div class="menu-side-title">Events</div>
                             </div>
                         </a>
                         <!-- ADS MANAGER -->
                         <a href="#">
                             <div class="menu-item"> 
-                                <!-- <i class="bi bi-bar-chart-fill menu-side-icon"></i> -->
-                                <img class="menu-side-icon" draggable="false" height="36" width="36" alt="" 
-                                src="image/ads-manager.png">
+                                <i class="bi bi-bar-chart-fill menu-side-icon"></i>
+                                <!-- <img class="menu-side-icon" draggable="false" height="36" width="36" alt="" 
+                                src="image/ads-manager.png"> -->
                                 <div class="menu-side-title">Ads Manager</div>
                             </div>
                         </a>
@@ -234,8 +281,7 @@
                         </a>
                         <!--  -->
                         <hr>
-                        <div class="side-footer"><a href="#" class="credits-footer">Facebook Pure Cascading
-                                Style Sheets</a>
+                        <div class="side-footer"><a href="#" class="credits-footer"> Cloned Facebook Home Page using CSS</a>
                             <p>Made by Robles Danilo</p>
                         </div>
 
@@ -306,7 +352,7 @@
                             <div class="content-name">
                                 <div class="post-name-flex"> 
                                   <div class="content-name-text content-padding">Robles Danilo</div>
-                                  <div class="content-post-time content-padding"> 28m <span > . </span><i class="fa-solid fa-user-group"></i></div>
+                                  <div class="content-post-time content-padding"> <a href="#" class="post-time-link content-post-time ">28m</a> <span > . </span><i class="fa-solid fa-user-group"></i></div>
                                 </div>
                             </div>
                            
@@ -332,41 +378,7 @@
                             </div>
                         </div>
 
-                        <div class="content-post">
-                            <div class="content-padding-post"> 
-                            <div class="content-flex"> 
-                            <div class="content-profilepicture"> 
-                            <a href="#" class="post-hover"><img src="image/jason.jpg" alt="jason"  
-                                class=" circle-shape post-something-picture object-contain"></a>
-                            </div>
-                            <div class="content-name">
-                                <div class="post-name-flex"> 
-                                  <div class="content-name-text content-padding">Robles Danilo</div>
-                                  <div class="content-post-time content-padding"><a href="#" class="post-time-link content-post-time ">28m</a> <span > . </span><i class="fa-solid fa-user-group"></i></div>
-                                </div>
-                            </div>
-                           
-                            <div class="content-menu">
-                                <div class="content-icon"> 
-                                <i class="fa-solid fa-ellipsis"></i>
-                                </div>
-                                <div class="content-icon"> 
-                                  <i class="fa-solid fa-x"></i> 
-                                </div>
-                            </div>
-                            </div>
-                            <div class="content-comment">
-                                <p class="content-comment-text">Made of GLASS?
-                                </p>
-                            </div>
-                            </div>
-                            <div class="content-post-image">
-                                <img src="image/post-example.jpg" class="post-image">
-                            </div>
-                            <div style="height: 5em;">
-                                
-                            </div>
-                        </div>
+                        
                         <!-- GENERATED ELEMENT -->
                     </div>
                 
@@ -383,7 +395,7 @@
                                 <h5>Contacts </h5>
                             </div>
                             <div class="contact-list">
-                                <a href="#" class="contact-menu"> <i class="fa-solid fa-magnifying-glass" style="margin-right: 1em;"></i></a>
+                                <a href="#" class="contact-menu"  style="margin-right: 1em;"> <i class="fa-solid fa-magnifying-glass" ></i></a>
                                 <a href="#" class="contact-menu"> <i class="fa-solid fa-ellipsis"></i></a>
                             </div>
                         </div>

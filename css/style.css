@@ -10,7 +10,6 @@
     outline: none; border: none;
     text-decoration: none;
  
-    /* transition: .2s linear; */
 }
 
 html{
@@ -19,7 +18,8 @@ html{
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
     overflow-y: scroll; 
-    background-color: var(--firstcolor);
+    background-color: var(--firstcolor); 
+     
 }
 
 html::webkit-scrollbar{
